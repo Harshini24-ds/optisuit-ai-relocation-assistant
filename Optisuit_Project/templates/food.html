@@ -1,0 +1,169 @@
+{% extends "base.html" %}
+
+{% block title %}OptiSuit | {{ ui_text.food }}{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <h2>{{ ui_text.food_page_title }}</h2>
+    <p>{{ ui_text.food_page_desc }}</p>
+</section>
+
+<section class="panel">
+    <form method="GET" action="{{ url_for('food') }}" class="filter-grid">
+        <input type="hidden" name="lang" value="{{ current_language or 'en' }}">
+        <input type="hidden" name="search_query" value="{{ search_query or '' }}">
+
+        <div class="form-group">
+            <label>{{ ui_text.city }}</label>
+            <select name="city" onchange="this.form.submit()">
+                {% for item in city_options %}
+                <option value="{{ item.original }}" {% if selected_city == item.original %}selected{% endif %}>{{ item.display }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>{{ ui_text.area }}</label>
+            <select name="area">
+                {% for item in area_options %}
+                <option value="{{ item.original }}" {% if selected_area == item.original %}selected{% endif %}>{{ item.display }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>{{ ui_text.food_type }}</label>
+            <select name="food_type">
+                {% for item in food_type_options %}
+                <option value="{{ item.original }}" {% if selected_food_type == item.original %}selected{% endif %}>{{ item.display }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>{{ ui_text.cuisine }}</label>
+            <select name="cuisine">
+                {% for item in cuisine_options %}
+                <option value="{{ item.original }}" {% if selected_cuisine == item.original %}selected{% endif %}>{{ item.display }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>{{ ui_text.max_meal_price }}</label>
+            <input type="number" name="max_price" value="{{ max_price or 300 }}">
+        </div>
+
+        <div class="form-group">
+            <label>{{ ui_text.minimum_rating }}</label>
+            <input type="number" step="0.1" name="min_rating" value="{{ min_rating or 4.0 }}">
+        </div>
+
+        <div class="form-group form-action">
+            <button type="submit" class="btn btn-primary">{{ ui_text.filter_food }}</button>
+        </div>
+    </form>
+</section>
+
+{% if food_stats %}
+<section class="metric-grid">
+    <div class="metric-card">
+        <p>{{ ui_text.matching_shops }}</p>
+        <h3>{{ food_stats.count }}</h3>
+    </div>
+    <div class="metric-card">
+        <p>{{ ui_text.avg_meal_price }}</p>
+        <h3>{{ food_stats.avg_price }}</h3>
+    </div>
+    <div class="metric-card">
+        <p>{{ ui_text.avg_rating }}</p>
+        <h3>{{ food_stats.avg_rating }}</h3>
+    </div>
+</section>
+{% endif %}
+
+{% if food_table %}
+<section class="panel">
+    <h3>{{ ui_text.food_options }}</h3>
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>{{ ui_text.shop_name }}</th>
+                    <th>{{ ui_text.food_type }}</th>
+                    <th>{{ ui_text.cuisine }}</th>
+                    <th>{{ ui_text.avg_meal_price }}</th>
+                    <th>{{ ui_text.rating }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in food_table %}
+                <tr>
+                    <td>{{ row.restaurant_name_display }}</td>
+                    <td>{{ row.food_type_display }}</td>
+                    <td>{{ row.cuisine_display }}</td>
+                    <td>{{ row.avg_meal_price }}</td>
+                    <td>{{ row.rating }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endif %}
+
+{% if food_chart %}
+<section class="grid-2">
+    <div class="panel">
+        <div class="chart-head">
+            <h3>{{ ui_text.food_price_vs_rating }}</h3>
+            <button type="button" class="explain-toggle" data-target="food-price-help" aria-expanded="false">{{ ui_text.what_does_this_mean }}</button>
+        </div>
+        <div id="food-price-help" class="chart-explainer">
+            <p>{{ ui_text.exp_food_price }}</p>
+        </div>
+        <div id="food-chart"></div>
+    </div>
+
+    <div class="panel">
+        <div class="chart-head">
+            <h3>{{ ui_text.cuisine_spread }}</h3>
+            <button type="button" class="explain-toggle" data-target="cuisine-help" aria-expanded="false">{{ ui_text.what_does_this_mean }}</button>
+        </div>
+        <div id="cuisine-help" class="chart-explainer">
+            <p>{{ ui_text.exp_cuisine_spread }}</p>
+        </div>
+        <div id="cuisine-chart"></div>
+    </div>
+</section>
+
+<section class="panel">
+    <div class="chart-head">
+        <h3>{{ ui_text.best_value_picks }}</h3>
+        <button type="button" class="explain-toggle" data-target="value-help" aria-expanded="false">{{ ui_text.what_does_this_mean }}</button>
+    </div>
+    <div id="value-help" class="chart-explainer">
+        <p>{{ ui_text.exp_value_picks }}</p>
+    </div>
+    <div id="value-chart"></div>
+</section>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+{% if food_chart %}
+<script id="food-chart-data" type="application/json">{{ food_chart | safe }}</script>
+<script id="cuisine-chart-data" type="application/json">{{ cuisine_chart | safe }}</script>
+<script id="value-chart-data" type="application/json">{{ value_chart | safe }}</script>
+
+<script>
+    const foodFig = JSON.parse(document.getElementById("food-chart-data").textContent);
+    const cuisineFig = JSON.parse(document.getElementById("cuisine-chart-data").textContent);
+    const valueFig = JSON.parse(document.getElementById("value-chart-data").textContent);
+
+    Plotly.newPlot("food-chart", foodFig.data, foodFig.layout, {responsive: true});
+    Plotly.newPlot("cuisine-chart", cuisineFig.data, cuisineFig.layout, {responsive: true});
+    Plotly.newPlot("value-chart", valueFig.data, valueFig.layout, {responsive: true});
+</script>
+{% endif %}
+{% endblock %}

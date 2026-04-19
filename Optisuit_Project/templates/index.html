@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+
+{% block title %}OptiSuit | {{ ui_text.home }}{% endblock %}
+
+{% block content %}
+<section class="hero-card hero-single">
+    <div class="hero-copy">
+        <span class="eyebrow">{{ ui_text.hero_badge }}</span>
+        <h2>{{ ui_text.hero_title }}</h2>
+        <p>{{ ui_text.hero_desc }}</p>
+    </div>
+</section>
+
+<section class="grid-3">
+    <div class="info-card">
+        <h3>{{ ui_text.ranked_recommendations }}</h3>
+        <p>{{ ui_text.ranked_recommendations_desc }}</p>
+    </div>
+    <div class="info-card">
+        <h3>{{ ui_text.comparison_mode }}</h3>
+        <p>{{ ui_text.comparison_mode_desc }}</p>
+    </div>
+    <div class="info-card">
+        <h3>{{ ui_text.food_suggestions_title }}</h3>
+        <p>{{ ui_text.food_suggestions_desc }}</p>
+    </div>
+</section>
+
+<section class="grid-2">
+    <div class="panel">
+        <div class="chart-head">
+            <h3>{{ ui_text.city_living_profile }}</h3>
+            <button type="button" class="explain-toggle" data-target="city-profile-help" aria-expanded="false">{{ ui_text.what_does_this_mean }}</button>
+        </div>
+        <div id="city-profile-help" class="chart-explainer">
+            <p>{{ ui_text.exp_city_profile }}</p>
+        </div>
+        <div id="city-profile-chart"></div>
+    </div>
+
+    <div class="panel">
+        <div class="chart-head">
+            <h3>{{ ui_text.relocation_decision_funnel }}</h3>
+            <button type="button" class="explain-toggle" data-target="city-funnel-help" aria-expanded="false">{{ ui_text.what_does_this_mean }}</button>
+        </div>
+        <div id="city-funnel-help" class="chart-explainer">
+            <p>{{ ui_text.exp_decision_funnel }}</p>
+        </div>
+        <div id="city-funnel-chart"></div>
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script id="city-profile-data" type="application/json">{{ city_profile_chart | safe }}</script>
+<script id="city-funnel-data" type="application/json">{{ city_funnel_chart | safe }}</script>
+
+<script>
+    const cityProfileFig = JSON.parse(document.getElementById("city-profile-data").textContent);
+    const cityFunnelFig = JSON.parse(document.getElementById("city-funnel-data").textContent);
+
+    Plotly.newPlot("city-profile-chart", cityProfileFig.data, cityProfileFig.layout, {responsive: true});
+    Plotly.newPlot("city-funnel-chart", cityFunnelFig.data, cityFunnelFig.layout, {responsive: true});
+</script>
+{% endblock %}

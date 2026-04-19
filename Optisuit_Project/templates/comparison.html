@@ -1,0 +1,269 @@
+{% extends "base.html" %}
+
+{% block title %}OptiSuit | {{ ui_text.comparison }}{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <h2>{{ ui_text.comparison_page_title }}</h2>
+    <p>{{ ui_text.comparison_page_desc }}</p>
+</section>
+
+<section class="panel">
+    <form method="GET" action="{{ url_for('comparison') }}" class="filter-grid">
+        <input type="hidden" name="lang" value="{{ current_language or 'en' }}">
+        <input type="hidden" name="search_query" value="{{ search_query or '' }}">
+
+        <div class="form-group">
+            <label>{{ ui_text.city }}</label>
+            <select name="city" onchange="this.form.submit()">
+                {% for item in city_options %}
+                <option value="{{ item.original }}" {% if selected_city == item.original %}selected{% endif %}>{{ item.display }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>{{ ui_text.monthly_budget }}</label>
+            <input type="number" name="monthly_budget" value="{{ monthly_budget or 20000 }}">
+        </div>
+
+        <div class="form-group">
+            <label>{{ ui_text.current_area }}</label>
+            <select name="current_area">
+                {% for item in area_options %}
+                <option value="{{ item.original }}" {% if current_area == item.original %}selected{% endif %}>{{ item.display }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+    <label>{{ ui_text.target_area }}</label>
+
+    <select id="area-picker">
+        <option value="">Select Area</option>
+        {% for item in area_options %}
+            {% if item.original != current_area %}
+            <option value="{{ item.original }}">
+                {{ item.display }}
+            </option>
+            {% endif %}
+        {% endfor %}
+    </select>
+
+    <div id="selected-areas"
+         style="margin-top:10px; display:flex; gap:8px; flex-wrap:wrap;">
+
+        {% for area in target_areas %}
+        <div class="area-chip"
+             data-value="{{ area }}"
+             style="padding:6px 12px; border-radius:20px; background:#24324a; color:white; display:flex; align-items:center; gap:8px;">
+
+            <span>{{ area }}</span>
+
+            <button type="button"
+                    onclick="removeArea(this)"
+                    style="background:none;border:none;color:#fff;cursor:pointer;">
+                ×
+            </button>
+
+            <input type="hidden" name="target_areas" value="{{ area }}">
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+        <div class="form-group form-action">
+            <button type="submit" class="btn btn-primary">{{ ui_text.compare_areas }}</button>
+        </div>
+    </form>
+</section>
+
+{% if comparison_rows %}
+<section class="grid-2">
+    {% for row in comparison_rows %}
+    <div class="panel">
+        <h3>{{ row.area_display }}</h3>
+        <div class="mini-grid">
+            <div class="mini-card">
+                <p>{{ ui_text.predicted_rent }}</p>
+                <h4>{{ row.predicted_rent }}</h4>
+            </div>
+            <div class="mini-card">
+                <p>{{ ui_text.food_cost }}</p>
+                <h4>{{ row.monthly_food_cost }}</h4>
+            </div>
+            <div class="mini-card">
+                <p>{{ ui_text.commute_cost }}</p>
+                <h4>{{ row.commute_cost }}</h4>
+            </div>
+            <div class="mini-card">
+                <p>{{ ui_text.total_cost }}</p>
+                <h4>{{ row.tcol }}</h4>
+            </div>
+            <div class="mini-card">
+                <p>{{ ui_text.safety_score }}</p>
+                <h4>{{ row.safety_score }}</h4>
+            </div>
+            <div class="mini-card">
+                <p>{{ ui_text.suitability }}</p>
+                <h4>{{ row.suitability_display }}</h4>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</section>
+{% endif %}
+
+{% if comparison_chart %}
+<section class="grid-2">
+
+    <div class="panel">
+        <div class="chart-head">
+            <h3>{{ ui_text.cost_comparison_chart }}</h3>
+            <button type="button" class="explain-toggle"
+                data-target="comparison-cost-help"
+                aria-expanded="false">
+                {{ ui_text.what_does_this_mean }}
+            </button>
+        </div>
+
+        <div id="comparison-cost-help" class="chart-explainer">
+            <p>{{ ui_text.exp_cost_comparison }}</p>
+        </div>
+
+        <div id="comparison-chart"></div>
+    </div>
+
+    <div class="panel">
+        <div class="chart-head">
+            <h3>{{ ui_text.decision_radar }}</h3>
+            <button type="button" class="explain-toggle"
+                data-target="comparison-radar-help"
+                aria-expanded="false">
+                {{ ui_text.what_does_this_mean }}
+            </button>
+        </div>
+
+        <div id="comparison-radar-help" class="chart-explainer">
+            <p>{{ ui_text.exp_decision_radar }}</p>
+        </div>
+
+        <div id="radar-chart"></div>
+    </div>
+
+</section>
+
+<!-- What-If Insight Panel -->
+<section style="margin-top: 18px;">
+    <div class="panel">
+        <div class="chart-head">
+            <h3>What-If Insight</h3>
+        </div>
+
+        <div class="insight-box">
+            <p>{{ rent_message }}</p>
+        </div>
+    </div>
+</section>
+
+{% endif %}
+{% if food_rows %}
+<section class="panel">
+    <h3>{{ ui_text.food_comparison }}</h3>
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>{{ ui_text.area }}</th>
+                    <th>{{ ui_text.total_shops }}</th>
+                    <th>{{ ui_text.avg_meal_price }}</th>
+                    <th>{{ ui_text.avg_rating }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in food_rows %}
+                <tr>
+                    <td>{{ row.area_display }}</td>
+                    <td>{{ row.total_shops }}</td>
+                    <td>{{ row.avg_meal_price }}</td>
+                    <td>{{ row.avg_rating }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endif %}
+
+{% if food_summary_chart %}
+<section class="panel">
+    <div class="chart-head">
+        <h3>{{ ui_text.food_availability_snapshot }}</h3>
+        <button type="button" class="explain-toggle" data-target="food-snapshot-help" aria-expanded="false">{{ ui_text.what_does_this_mean }}</button>
+    </div>
+    <div id="food-snapshot-help" class="chart-explainer">
+        <p>{{ ui_text.exp_food_snapshot }}</p>
+    </div>
+    <div id="food-summary-chart"></div>
+</section>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+
+{% if comparison_chart %}
+<script id="comparison-data" type="application/json">{{ comparison_chart | safe }}</script>
+<script id="radar-data" type="application/json">{{ radar_chart | safe }}</script>
+<script id="food-summary-data" type="application/json">{{ food_summary_chart | safe }}</script>
+
+<script>
+const comparisonFig = JSON.parse(document.getElementById("comparison-data").textContent);
+const radarFig = JSON.parse(document.getElementById("radar-data").textContent);
+const foodSummaryFig = JSON.parse(document.getElementById("food-summary-data").textContent);
+
+Plotly.newPlot("comparison-chart", comparisonFig.data, comparisonFig.layout, {responsive:true});
+Plotly.newPlot("radar-chart", radarFig.data, radarFig.layout, {responsive:true});
+Plotly.newPlot("food-summary-chart", foodSummaryFig.data, foodSummaryFig.layout, {responsive:true});
+</script>
+{% endif %}
+
+<!-- ✅ Always load area picker script -->
+<script>
+const picker = document.getElementById("area-picker");
+const selectedBox = document.getElementById("selected-areas");
+
+if (picker && selectedBox) {
+    picker.addEventListener("change", function () {
+        const value = this.value;
+        const text = this.options[this.selectedIndex].text;
+
+        if (!value) return;
+
+        if (selectedBox.querySelector(`[data-value="${value}"]`)) {
+            this.value = "";
+            return;
+        }
+
+        const chip = document.createElement("div");
+        chip.className = "area-chip";
+        chip.setAttribute("data-value", value);
+        chip.style = "padding:6px 12px; border-radius:20px; background:#24324a; color:white; display:flex; align-items:center; gap:8px;";
+
+        chip.innerHTML = `
+            <span>${text}</span>
+            <button type="button" onclick="removeArea(this)"
+                style="background:none;border:none;color:#fff;cursor:pointer;">×</button>
+            <input type="hidden" name="target_areas" value="${value}">
+        `;
+
+        selectedBox.appendChild(chip);
+        this.value = "";
+    });
+}
+
+function removeArea(btn) {
+    btn.parentElement.remove();
+}
+</script>
+
+{% endblock %}

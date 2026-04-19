@@ -1,0 +1,31 @@
+<svg width="256" height="256" viewBox="0 0 256 256" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="shieldGlow" x1="40" y1="36" x2="214" y2="220" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#7FA8D6"/>
+      <stop offset="1" stop-color="#325C88"/>
+    </linearGradient>
+    <linearGradient id="roofGlow" x1="86" y1="68" x2="128" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F4F8FC"/>
+      <stop offset="1" stop-color="#AFC3D8"/>
+    </linearGradient>
+    <linearGradient id="pinCore" x1="112" y1="90" x2="150" y2="176" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#D7E4F2"/>
+      <stop offset="1" stop-color="#7E9FBE"/>
+    </linearGradient>
+  </defs>
+
+  <rect x="24" y="24" width="208" height="208" rx="52" fill="#0D1726"/>
+  <rect x="29" y="29" width="198" height="198" rx="47" stroke="url(#shieldGlow)" stroke-opacity="0.5" stroke-width="2"/>
+
+  <path d="M64 112L128 62L192 112V174C192 184.493 183.493 193 173 193H83C72.5066 193 64 184.493 64 174V112Z" fill="url(#shieldGlow)" fill-opacity="0.18"/>
+
+  <path d="M84 118L128 84L172 118" stroke="url(#roofGlow)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M96 116V168C96 171.314 98.6863 174 102 174H154C157.314 174 160 171.314 160 168V116" stroke="#EAF2F8" stroke-width="10" stroke-linecap="round"/>
+
+  <path d="M128 94C111.431 94 98 107.431 98 124C98 147.25 128 184 128 184C128 184 158 147.25 158 124C158 107.431 144.569 94 128 94Z" fill="url(#pinCore)"/>
+  <circle cx="128" cy="124" r="12" fill="#0D1726"/>
+
+  <rect x="109" y="145" width="10" height="23" rx="5" fill="#EAF2F8"/>
+  <rect x="123" y="136" width="10" height="32" rx="5" fill="#D5E2EF"/>
+  <rect x="137" y="151" width="10" height="17" rx="5" fill="#ADC1D7"/>
+</svg>

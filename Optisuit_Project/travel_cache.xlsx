@@ -1,0 +1,33 @@
+origin,destination,car_time
+Bellandur,Electronic City,20
+Btm Layout,Electronic City,16
+Electronic City,Electronic City,0
+Hebbal,Electronic City,34
+Hsr Layout,Electronic City,15
+Jp Nagar,Electronic City,20
+Koramangala,Electronic City,17
+Marathahalli,Electronic City,25
+Whitefield,Electronic City,8456
+Yelahanka,Electronic City,42
+Ambattur,Anna Nagar,11
+Nungambakkam,Anna Nagar,7
+Perambur,Anna Nagar,10
+Adyar,Omr,4
+Perungudi,Omr,6
+Sholinganallur,Omr,11
+Velachery,Omr,6
+Bellandur,Whitefield,8463
+Marathahalli,Whitefield,8459
+Adyar,Guindy,7
+Sholinganallur,Guindy,17
+Tambaram,Guindy,24
+Anna Nagar,Guindy,16
+Guindy,Guindy,0
+Mylapore,Guindy,12
+Perungudi,Guindy,12
+Porur,Guindy,12
+T Nagar,Guindy,5
+Vadapalani,Guindy,10
+Velachery,Guindy,9
+Porur,Sholinganallur,27
+Tambaram,Sholinganallur,17

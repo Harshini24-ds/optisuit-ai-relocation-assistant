@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="{{ current_language or 'en' }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>{% block title %}OptiSuit{% endblock %}</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+</head>
+<body>
+    <div class="bg-orb orb-1"></div>
+    <div class="bg-orb orb-2"></div>
+
+    <header class="topbar">
+        <div class="brand">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="OptiSuit logo" class="brand-logo">
+                <h1>OptiSuit</h1>
+                <p>AI-Driven Relocation Assistant</p>
+            </div>
+        </div>
+
+        <nav class="nav-links">
+            <a href="{{ url_for('home', lang=current_language) }}" class="{% if active_page == 'home' %}active{% endif %}">
+                {{ ui_text.home }}
+            </a>
+            <a href="{{ url_for('ranked', lang=current_language) }}" class="{% if active_page == 'ranked' %}active{% endif %}">
+                {{ ui_text.ranked }}
+            </a>
+            <a href="{{ url_for('comparison', lang=current_language) }}" class="{% if active_page == 'comparison' %}active{% endif %}">
+                {{ ui_text.comparison }}
+            </a>
+            <a href="{{ url_for('food', lang=current_language) }}" class="{% if active_page == 'food' %}active{% endif %}">
+                {{ ui_text.food }}
+            </a>
+        </nav>
+    </header>
+
+    <section class="top-controls">
+        <form method="GET" action="{{ request.path }}" class="language-form">
+            {% for key, value in request.args.items() %}
+                {% if key != 'lang' %}
+                <input type="hidden" name="{{ key }}" value="{{ value }}">
+                {% endif %}
+            {% endfor %}
+
+            <label for="lang-select" class="top-label">{{ ui_text.language }}</label>
+            <select id="lang-select" name="lang" onchange="this.form.submit()">
+                <option value="en" {% if current_language == 'en' %}selected{% endif %}>English</option>
+                <option value="kn" {% if current_language == 'kn' %}selected{% endif %}>Kannada</option>
+                <option value="ta" {% if current_language == 'ta' %}selected{% endif %}>Tamil</option>
+                <option value="hi" {% if current_language == 'hi' %}selected{% endif %}>Hindi</option>
+            </select>
+        </form>
+
+        <form method="GET" action="{{ request.path }}" class="search-form">
+            {% for key, value in request.args.items() %}
+                {% if key != 'search_query' %}
+                <input type="hidden" name="{{ key }}" value="{{ value }}">
+                {% endif %}
+            {% endfor %}
+
+            <label for="search-query" class="top-label">{{ ui_text.search_query }}</label>
+            <div class="search-row">
+                <input
+                    id="search-query"
+                    type="text"
+                    name="search_query"
+                    value="{{ search_query or '' }}"
+                    placeholder="{{ ui_text.search_placeholder }}"
+                >
+                <button type="submit" class="search-btn">{{ ui_text.search }}</button>
+            </div>
+        </form>
+    </section>
+
+
+    <main class="page-shell">
+        {% block content %}{% endblock %}
+    </main>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>
+ 

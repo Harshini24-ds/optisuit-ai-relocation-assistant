@@ -1,0 +1,353 @@
+{% extends "base.html" %}
+
+{% block title %}OptiSuit | {{ ui_text.ranked }}{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <h2>{{ ui_text.ranked_page_title }}</h2>
+    <p>{{ ui_text.ranked_page_desc }}</p>
+</section>
+
+<section class="panel">
+    <form method="GET" action="{{ url_for('ranked') }}" class="filter-grid">
+        <input type="hidden" name="map_lat" id="map-lat">
+        <input type="hidden" name="map_lon" id="map-lon">
+        <input type="hidden" name="lang" value="{{ current_language or 'en' }}">
+        <input type="hidden" name="search_query" value="{{ search_query or '' }}">
+
+        <div class="form-group">
+            <label>{{ ui_text.city }}</label>
+            <select name="city" onchange="this.form.submit()">
+                {% for item in city_options %}
+                <option value="{{ item.original }}" {% if selected_city == item.original %}selected{% endif %}>{{ item.display }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>{{ ui_text.monthly_budget }}</label>
+            <input type="number" name="monthly_budget" value="{{ monthly_budget or 20000 }}">
+        </div>
+
+        <div class="form-group">
+            <label>{{ ui_text.house_type }}</label>
+            <select name="house_type">
+                {% for item in house_type_options %}
+                <option value="{{ item.original }}" {% if house_type == item.original %}selected{% endif %}>{{ item.display }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>User Type</label>
+            <select name="user_type" onchange="this.form.submit()">
+                <option value="student" {% if user_type == "student" %}selected{% endif %}>Student</option>
+                <option value="it_professional" {% if user_type == "it_professional" %}selected{% endif %}>IT Professional</option>
+                <option value="family" {% if user_type == "family" %}selected{% endif %}>Family</option>
+                <option value="senior" {% if user_type == "senior" %}selected{% endif %}>Senior Citizen</option>
+                <option value="bachelor" {% if user_type == "bachelor" %}selected{% endif %}>Bachelor</option>
+                <option value="luxury" {% if user_type == "luxury" %}selected{% endif %}>Luxury Seeker</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>{{ ui_text.work_location }}</label>
+            <select name="work_location">
+                {% for item in work_location_options %}
+                <option value="{{ item.original }}" {% if selected_work_location == item.original %}selected{% endif %}>{{ item.display }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Custom Place</label>
+            <input
+                type="text"
+                name="custom_place"
+                value="{{ custom_place or '' }}"
+                placeholder="Enter college, office, hospital, station..."
+            >
+        </div>
+
+        <div class="form-group">
+            <label>{{ ui_text.meals_per_month }}</label>
+            <input type="number" name="eating_frequency" value="{{ eating_frequency or 60 }}">
+        </div>
+
+        <div class="form-group">
+            <label>{{ ui_text.budget_priority }}</label>
+            <select name="budget_priority">
+                {% for item in priority_options %}
+                <option value="{{ item.original }}" {% if budget_priority == item.original %}selected{% endif %}>{{ item.display }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>{{ ui_text.safety_priority }}</label>
+            <select name="safety_priority">
+                {% for item in priority_options %}
+                <option value="{{ item.original }}" {% if safety_priority == item.original %}selected{% endif %}>{{ item.display }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>{{ ui_text.commute_priority }}</label>
+            <select name="commute_priority">
+                {% for item in priority_options %}
+                <option value="{{ item.original }}" {% if commute_priority == item.original %}selected{% endif %}>{{ item.display }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>{{ ui_text.food_priority }}</label>
+            <select name="food_priority">
+                {% for item in priority_options %}
+                <option value="{{ item.original }}" {% if food_priority == item.original %}selected{% endif %}>{{ item.display }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="form-group form-action">
+            <button type="submit" class="btn btn-primary">{{ ui_text.find_best_areas }}</button>
+        </div>
+    </form>
+</section>
+
+{% if best_area %}
+<section class="metric-grid">
+    <div class="metric-card">
+        <p>{{ ui_text.best_area }}</p>
+        <h3>{{ best_area.area_display }}</h3>
+    </div>
+
+    <div class="metric-card">
+        <p>{{ ui_text.predicted_rent }}</p>
+        <h3>{{ best_area.predicted_rent }}</h3>
+    </div>
+
+    <div class="metric-card">
+        <p>{{ ui_text.total_cost }}</p>
+        <h3>{{ best_area.tcol }}</h3>
+    </div>
+
+    <div class="metric-card">
+        <p>{{ ui_text.safety_score }}</p>
+        <h3>{{ best_area.safety_score }}</h3>
+    </div>
+
+    <div class="metric-card">
+        <p>Car Time</p>
+        <h3>{{ best_area.car_time }}</h3>
+    </div>
+
+    <div class="metric-card">
+        <p>Bike Time</p>
+        <h3>{{ best_area.bike_time }}</h3>
+    </div>
+
+    <div class="metric-card">
+        <p>Train Time</p>
+        <h3>{{ best_area.train_time }}</h3>
+    </div>
+
+    <div class="metric-card">
+        <p>Metro Time</p>
+        <h3>{{ best_area.metro_time }}</h3>
+    </div>
+</section>
+{% endif %}
+
+{% if ranked_rows %}
+<section class="panel">
+    <div class="section-title">
+        <h3>{{ ui_text.area_rankings }}</h3>
+    </div>
+
+    <div class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                    <th>{{ ui_text.rank }}</th>
+                    <th>{{ ui_text.area }}</th>
+                    <th>{{ ui_text.predicted_rent }}</th>
+                    <th>{{ ui_text.food_cost }}</th>
+                    <th>{{ ui_text.commute_cost }}</th>
+                    <th>{{ ui_text.total_cost }}</th>
+                    <th>{{ ui_text.safety }}</th>
+                    <th>{{ ui_text.cluster }}</th>
+                    <th>{{ ui_text.suitability }}</th>
+                    <th>{{ ui_text.outlier }}</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                {% for row in ranked_rows %}
+                <tr>
+                    <td>{{ row.rank }}</td>
+                    <td>{{ row.area_display }}</td>
+                    <td>{{ row.predicted_rent }}</td>
+                    <td>{{ row.monthly_food_cost }}</td>
+                    <td>{{ row.commute_cost }}</td>
+                    <td>{{ row.tcol }}</td>
+                    <td>{{ row.safety_score }}</td>
+                    <td>{{ row.cluster_display }}</td>
+                    <td><span class="badge">{{ row.suitability_display }}</span></td>
+                    <td>{{ row.outlier_display }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</section>
+{% endif %}
+
+{% if not ranked_rows %}
+<section class="panel">
+    <p>No matching areas found. Try another destination, budget, or user type.</p>
+</section>
+{% endif %}
+
+{% if map_rows %}
+<section class="panel">
+    <div class="section-title">
+        <h3>
+        {% if show_map_suggestions %}
+        Nearby Recommended Areas
+        {% else %}
+        Recommended Areas Map
+        {% endif %}
+        </h3>
+    </div>
+
+    <div
+        id="ranked-map"
+        data-map-rows='{{ map_rows | tojson | safe }}'
+        style="height:420px; border-radius:16px;">
+    </div>
+</section>
+{% endif %}
+
+
+{% if tcost_chart %}
+<section class="grid-2">
+    <div class="panel">
+        <div class="chart-head">
+            <h3>{{ ui_text.tcost_comparison }}</h3>
+            <button type="button" class="explain-toggle" data-target="tcost-help" aria-expanded="false">{{ ui_text.what_does_this_mean }}</button>
+        </div>
+        <div id="tcost-help" class="chart-explainer">
+            <p>{{ ui_text.exp_tcol }}</p>
+        </div>
+        <div id="tcost-chart"></div>
+    </div>
+
+    <div class="panel">
+        <div class="chart-head">
+            <h3>{{ ui_text.safety_vs_tcol }}</h3>
+            <button type="button" class="explain-toggle" data-target="scatter-help" aria-expanded="false">{{ ui_text.what_does_this_mean }}</button>
+        </div>
+        <div id="scatter-help" class="chart-explainer">
+            <p>{{ ui_text.exp_safety_vs_tcol }}</p>
+        </div>
+        <div id="scatter-chart"></div>
+    </div>
+</section>
+{% endif %}
+
+{% if suitability_chart %}
+<section class="grid-2">
+    <div class="panel">
+        <div class="chart-head">
+            <h3>{{ ui_text.suitability_score_ladder }}</h3>
+            <button type="button" class="explain-toggle" data-target="suitability-help" aria-expanded="false">{{ ui_text.what_does_this_mean }}</button>
+        </div>
+        <div id="suitability-help" class="chart-explainer">
+            <p>{{ ui_text.exp_suitability }}</p>
+        </div>
+        <div id="suitability-chart"></div>
+    </div>
+
+    <div class="panel">
+        <div class="chart-head">
+            <h3>{{ ui_text.cluster_mix }}</h3>
+            <button type="button" class="explain-toggle" data-target="cluster-help" aria-expanded="false">{{ ui_text.what_does_this_mean }}</button>
+        </div>
+        <div id="cluster-help" class="chart-explainer">
+            <p>{{ ui_text.exp_cluster_mix }}</p>
+        </div>
+        <div id="cluster-chart"></div>
+    </div>
+</section>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+{% if tcost_chart %}
+<script id="tcost-data" type="application/json">{{ tcost_chart | safe }}</script>
+<script id="scatter-data" type="application/json">{{ scatter_chart | safe }}</script>
+<script id="suitability-data" type="application/json">{{ suitability_chart | safe }}</script>
+<script id="cluster-data" type="application/json">{{ cluster_chart | safe }}</script>
+
+<script>
+    const tcostFig = JSON.parse(document.getElementById("tcost-data").textContent);
+    const scatterFig = JSON.parse(document.getElementById("scatter-data").textContent);
+    const suitabilityFig = JSON.parse(document.getElementById("suitability-data").textContent);
+    const clusterFig = JSON.parse(document.getElementById("cluster-data").textContent);
+
+    Plotly.newPlot("tcost-chart", tcostFig.data, tcostFig.layout, {responsive: true});
+    Plotly.newPlot("scatter-chart", scatterFig.data, scatterFig.layout, {responsive: true});
+    Plotly.newPlot("suitability-chart", suitabilityFig.data, suitabilityFig.layout, {responsive: true});
+    Plotly.newPlot("cluster-chart", clusterFig.data, clusterFig.layout, {responsive: true});
+</script>
+{% endif %}
+
+
+{% if map_rows %}
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+<script>
+const map = L.map('ranked-map').setView([13.05, 80.22], 11);
+
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap'
+}).addTo(map);
+
+const locations = JSON.parse(
+    document.getElementById('ranked-map').dataset.mapRows
+);
+
+const bounds = [];
+
+/* ✅ Existing markers + popups */
+locations.forEach(place => {
+    if (place.lat && place.lon) {
+        bounds.push([place.lat, place.lon]);
+
+        L.marker([place.lat, place.lon]).addTo(map)
+        .bindPopup(`
+            <b>${place.area_display}</b><br>
+            Rent: ${place.predicted_rent}<br>
+            Total: ${place.tcol}<br>
+            Safety: ${place.safety_score}
+        `);
+    }
+});
+
+/* ✅ Auto fit map to markers */
+if (bounds.length > 0) {
+    map.fitBounds(bounds, { padding: [30, 30] });
+}
+
+/* ✅ Click on map = search nearest area */
+map.on("click", function(e) {
+    document.getElementById("map-lat").value = e.latlng.lat;
+    document.getElementById("map-lon").value = e.latlng.lng;
+
+    document.querySelector(".filter-grid").submit();
+});
+</script>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,357 @@
+city,area,restaurant_name,food_type,cuisine,avg_meal_price,rating
+Bengaluru,BTM Layout,Mocktail n More,Restaurant,Beverages,50,4.3
+Bengaluru,BTM Layout,Momos King & Rolls Mania,Restaurant,Chinese,100,4.5
+Bengaluru,BTM Layout,HINA RESTAURANT,Restaurant,North Indian,125,3.3
+Bengaluru,BTM Layout,Barbeque Nation,Restaurant,North Indian,300,3.9
+Bengaluru,BTM Layout,Tha Punjabi Zaiqa,Restaurant,Indian,100,3.3
+Bengaluru,BTM Layout,Uttara Karnatakada Jolada Rotti Angadi,Restaurant,Snacks,100,4.2
+Bengaluru,BTM Layout,Scooby doo Pizza ,Restaurant,Pizzas,150,3.1
+Bengaluru,BTM Layout,ROLL CORNER,Restaurant,Street Food,125,4.0
+Bengaluru,BTM Layout,SLK BIRIYANI ADDA,Restaurant,Biryani,75,3.1
+Bengaluru,BTM Layout,Karavali Family Hotel,Restaurant,Seafood,150,3.2
+Bengaluru,Bellandur,Donne biriyanis house,Restaurant,South Indian,150,3.5
+Bengaluru,Bellandur,Chilly Garlic,Restaurant,Chinese,100,3.8
+Bengaluru,Bellandur,Nakkshatra,Restaurant,Indian,400,3.6
+Bengaluru,Bellandur,Paratha Envy,Restaurant,North Indian,124,3.0
+Bengaluru,Bellandur,ODISHA DHABA,Restaurant,North Indian,150,4.3
+Bengaluru,Bellandur,Sandhya kitchen,Restaurant,North Indian,150,4.1
+Bengaluru,Bellandur,South Indian Meals,Restaurant,South Indian,75,3.4
+Bengaluru,Bellandur,Leon Kebab,Restaurant,Kebabs,125,3.9
+Bengaluru,Bellandur,FIRANGI CHINESE,Restaurant,Chinese,100,4.4
+Bengaluru,Bellandur,RADHA KRISHNA CHINESE FAST FOOD,Restaurant,Chinese,75,3.1
+Bengaluru,Electronic City,ZAIKA BIRYANI HOUSE,Restaurant,Biryani,150,4.1
+Bengaluru,Electronic City,Andhra Gunpowder,Restaurant,Andhra,175,4.1
+Bengaluru,Electronic City,Seasons,Restaurant,North Indian,150,3.6
+Bengaluru,Electronic City,House Of Mandiness,Restaurant,Biryani,250,3.2
+Bengaluru,Electronic City,Aromas Of China,Restaurant,Chinese,150,4.0
+Bengaluru,Electronic City,Bawarchi Biryani House,Restaurant,Biryani,100,4.1
+Bengaluru,Electronic City,The Chinese Bowl,Restaurant,Chinese,100,3.1
+Bengaluru,Electronic City,Tea Bar,Restaurant,Beverages,75,4.3
+Bengaluru,Electronic City,Dindigul Thalappakatti,Restaurant,Biryani,300,3.4
+Bengaluru,Electronic City,BANGARPET CHATS,Restaurant,Indian,100,3.3
+Bengaluru,HSR Layout,Keventers Ice Cream,Restaurant,Ice Cream,150,3.6
+Bengaluru,HSR Layout,Raj Sandwich Hub,Restaurant,Indian,200,4.0
+Bengaluru,HSR Layout,Nanda's,Restaurant,Andhra,200,3.8
+Bengaluru,HSR Layout,ATH - All Things Healthy!,Cloud Kitchen,Healthy Food,100,3.5
+Bengaluru,HSR Layout,Daily Sushi,Restaurant,Japanese,600,4.3
+Bengaluru,HSR Layout,BTC (Bathinda Thali Company),Restaurant,Chinese,150,3.3
+Bengaluru,HSR Layout,Chaayos Chai+Snacks=Relax,Cloud Kitchen,Bakery,125,3.7
+Bengaluru,HSR Layout,lilVita,Cloud Kitchen,Healthy Food,150,4.4
+Bengaluru,HSR Layout,Punjabi Unplugged,Restaurant,North Indian,150,3.9
+Bengaluru,HSR Layout,Chaat Paavlian,Restaurant,South Indian,75,3.1
+Bengaluru,Hebbal,One for the Road,Restaurant,Chinese,400,3.5
+Bengaluru,Hebbal,Garlic & Cloves,Restaurant,Indian,250,3.9
+Bengaluru,Hebbal,DVG Benne Dosa,Restaurant,South Indian,50,3.1
+Bengaluru,Hebbal,Baskin Robbins,Restaurant,Desserts,75,4.0
+Bengaluru,Hebbal,Mr. Chef,Restaurant,Indian,75,4.1
+Bengaluru,Hebbal,Burger King,Restaurant,American,175,4.0
+Bengaluru,Hebbal,The House of the Momoz,Restaurant,Chinese,75,3.9
+Bengaluru,Hebbal,Just Protein,Restaurant,Chinese,150,3.2
+Bengaluru,Hebbal,NEW ROYAL HOTEL,Restaurant,Biryani,100,3.4
+Bengaluru,Hebbal,Pizza Hut,Restaurant,Pizzas,175,3.4
+Bengaluru,Indiranagar,Lot Like Crepes Indiranagar,Restaurant,French,250,3.4
+Bengaluru,Indiranagar,Bangalore Mandarin,Restaurant,Chinese,400,4.4
+Bengaluru,Indiranagar,YUMMY BURGER KING,Restaurant,Continental,125,4.0
+Bengaluru,Indiranagar,DOSA CORNER,Restaurant,South Indian,100,4.3
+Bengaluru,Indiranagar,Raaga,Restaurant,Chinese,350,4.5
+Bengaluru,Indiranagar,Bob's Bar,Restaurant,South Indian,150,4.2
+Bengaluru,Indiranagar,MR.SANDWICH,Restaurant,Fast Food,75,4.0
+Bengaluru,Indiranagar,Thali 99,Restaurant,Thalis,125,4.0
+Bengaluru,Indiranagar,Savera Taj Family Restaurant,Restaurant,North Indian,200,4.4
+Bengaluru,Indiranagar,Punjabi Meals Express,Cloud Kitchen,Combo,125,3.1
+Bengaluru,JP Nagar,INOX,Restaurant,Fast Food,200,4.2
+Bengaluru,JP Nagar,Nagarjuna,Restaurant,Andhra,300,3.2
+Bengaluru,JP Nagar,Tytan biryani,Restaurant,Biryani,100,3.7
+Bengaluru,JP Nagar,KFC,Restaurant,American,200,3.8
+Bengaluru,JP Nagar,VINAY NDMS,Restaurant,Snacks,150,3.9
+Bengaluru,JP Nagar,Levels Pub & Kitchen,Restaurant,Indian,250,3.3
+Bengaluru,JP Nagar,JUST CREAMERY - Artisanal Healthy Ice Cream,Cloud Kitchen,Ice Cream,100,3.9
+Bengaluru,JP Nagar,Let's Get Started by Flayvor Co.,Restaurant,Tandoor,250,3.8
+Bengaluru,JP Nagar,NEW ABHIRUCHI RESTAURANT,Restaurant,North Indian,150,4.0
+Bengaluru,JP Nagar,The Biryani Life,Restaurant,Biryani,125,3.9
+Bengaluru,Jayanagar,Ibaco,Restaurant,Desserts,400,3.8
+Bengaluru,Jayanagar,Rajdhani,Restaurant,Rajasthani,200,3.5
+Bengaluru,Jayanagar,Banashankari Donne Biriyani,Restaurant,Biryani,100,3.6
+Bengaluru,Jayanagar,Food Nation,Restaurant,North Indian,125,4.3
+Bengaluru,Jayanagar,ROTI MANE,Restaurant,Indian,50,3.7
+Bengaluru,Jayanagar,Sams Food Magic,Restaurant,Indian,125,4.0
+Bengaluru,Jayanagar,The Royal Corner - Pai Viceroy,Restaurant,North Indian,350,4.3
+Bengaluru,Jayanagar,The Jade Kitchen,Restaurant,Chinese,225,3.9
+Bengaluru,Jayanagar,4th Tea block,Restaurant,Beverages,50,3.1
+Bengaluru,Jayanagar,Kwality Walls Frozen Dessert and Ice Cream Shop,Restaurant,Ice Cream,150,4.2
+Bengaluru,Koramangala,Cane Crussh,Cloud Kitchen,Juices,50,3.1
+Bengaluru,Koramangala,DYU ART CAFE,Restaurant,Italian,200,4.2
+Bengaluru,Koramangala,Brownie Heaven,Restaurant,Desserts,175,3.7
+Bengaluru,Koramangala,Kaati Zone Rolls & Wraps,Restaurant,Fast Food,75,4.5
+Bengaluru,Koramangala,Aubree,Restaurant,Desserts,350,3.3
+Bengaluru,Koramangala,Buddha Bites,Cloud Kitchen,Chinese,125,3.3
+Bengaluru,Koramangala,12th Main Restaurant,Restaurant,Indian,500,4.4
+Bengaluru,Koramangala,FOOD ADDA,Restaurant,Fast Food,125,3.6
+Bengaluru,Koramangala,Good Fettle Healthy Ice Cream,Restaurant,Ice Cream,95,3.1
+Bengaluru,Koramangala,Dinesh Food Corner,Restaurant,Chinese,250,3.8
+Bengaluru,Marathahalli,Pind Da Chula,Restaurant,North Indian,175,3.6
+Bengaluru,Marathahalli,Sanjha Chulha,Restaurant,North Indian,150,3.2
+Bengaluru,Marathahalli,Andhra Kafe,Restaurant,Andhra,300,4.0
+Bengaluru,Marathahalli,Asha Tiffins,Restaurant,South Indian,100,3.8
+Bengaluru,Marathahalli,Indian Biryani Company,Restaurant,Biryani,200,3.0
+Bengaluru,Marathahalli,Malgudi - Southern Cuisine,Restaurant,South Indian,250,4.5
+Bengaluru,Marathahalli,Homelike,Cloud Kitchen,Home Food,75,3.3
+Bengaluru,Marathahalli,Prasanna Restaurant,Restaurant,Indian,125,3.3
+Bengaluru,Marathahalli,Jhanhavi Restaurant,Restaurant,Beverages,125,4.1
+Bengaluru,Marathahalli,Madurai Idly Dosa Shop,Restaurant,South Indian,50,3.4
+Bengaluru,Whitefield,RJ 14 KITCHEN,Restaurant,Indian,150,4.2
+Bengaluru,Whitefield,Cookie Man,Restaurant,Desserts,70,4.1
+Bengaluru,Whitefield,Soulful Sweets & Savories,Restaurant,Sweets,140,4.3
+Bengaluru,Whitefield,The Sandwich Station,Restaurant,Continental,75,3.7
+Bengaluru,Whitefield,MSI Royal Biryani House,Restaurant,Biryani,150,3.5
+Bengaluru,Whitefield,Nadan Pothichoru,Restaurant,South Indian,100,3.4
+Bengaluru,Whitefield,Oven Story Pizza,Restaurant,Pizzas,200,3.2
+Bengaluru,Whitefield,Dumont Creamery,Restaurant,Ice Cream,125,4.3
+Bengaluru,Whitefield,Begum Paan,Restaurant,Paan,50,4.4
+Bengaluru,Whitefield,Money Heist MultiCuisine Restaurant,Restaurant,Indian,250,3.9
+Bengaluru,Yelahanka,NIC Natural Ice Creams,Restaurant,Ice Cream,60,4.0
+Bengaluru,Yelahanka,Taco Bell,Restaurant,Mexican,150,4.2
+Bengaluru,Yelahanka,Biryan,Restaurant,Biryani,250,4.2
+Bengaluru,Yelahanka,The Food Factory Restaurant,Restaurant,Chinese,200,3.2
+Bengaluru,Yelahanka,AK CANE FRESH JUICE,Restaurant,Beverages,50,3.8
+Bengaluru,Yelahanka,New Chickpete Donne Biryani,Restaurant,Biryani,150,4.3
+Bengaluru,Yelahanka,winni cakes and more,Restaurant,Bakery,200,3.4
+Bengaluru,Yelahanka,Biryani By Kilo,Restaurant,Biryani,250,4.1
+Bengaluru,Yelahanka,Dhaba by Ramanashree,Restaurant,Andhra,750,3.4
+Bengaluru,Yelahanka,Brahmins' Thatte Idli,Restaurant,South Indian,75,3.3
+Bengaluru,Yeshwanthpur,Hotel Aasare,Restaurant,Biryani,150,3.6
+Bengaluru,Yeshwanthpur,SUBBANNA MILITARY HOTEL,Restaurant,Indian,75,3.6
+Bengaluru,Yeshwanthpur,Cake Gallery,Restaurant,Desserts,170,4.2
+Bengaluru,Yeshwanthpur,Thalassery Restaurant,Restaurant,South Indian,150,4.1
+Bengaluru,Yeshwanthpur,Kwality Walls Frozen Dessert and Ice Cream Shop,Restaurant,Ice Cream,150,3.4
+Bengaluru,Yeshwanthpur,Cheenchatti Coorg Cuisine,Restaurant,South Indian,200,3.9
+Bengaluru,Yeshwanthpur,SIDDESHWARA HOTEL,Restaurant,South Indian,125,4.1
+Bengaluru,Yeshwanthpur,Mealful Rolls - Meals in a Roll,Restaurant,Fast Food,125,3.0
+Bengaluru,Yeshwanthpur,Jaggery cafe,Cloud Kitchen,Healthy Food,75,4.2
+Bengaluru,Yeshwanthpur,FRANKIE'S BURGER,Restaurant,Fast Food,75,3.9
+Chennai,Adyar,Hotel City Gate,Restaurant,Arabian,150,4.3
+Chennai,Adyar,Gangotree,Restaurant,Street Food,150,4.5
+Chennai,Adyar,Jayloh's Kitchen,Restaurant,Indian,150,1.0
+Chennai,Adyar,Valasu,Restaurant,Beverages,50,1.0
+Chennai,Adyar,Chai Kings,Restaurant,Beverages,75,4.6
+Chennai,Adyar,BUBBLE TEA CAFE,Cloud Kitchen,Juices,100,3.9
+Chennai,Adyar,MILLIONS  OF  MILKSHAKES,Restaurant,Beverages,125,1.0
+Chennai,Adyar,Fabcafe By Fabindia,Cloud Kitchen,Healthy Food,400,4.1
+Chennai,Adyar,MADRAS MILITARY HOTEL,Cloud Kitchen,Biryani,200,1.0
+Chennai,Adyar,Hotel Saravana Bhavan,Cloud Kitchen,South Indian,150,4.3
+Chennai,Anna Nagar,Artinci - Indulge Guilt Free!,Cloud Kitchen,Ice Cream,100,4.4
+Chennai,Anna Nagar,Continent Vegetaria,Cloud Kitchen,Snacks,100,1.0
+Chennai,Anna Nagar,SHREE SARAVANA FOODS,Restaurant,Beverages,100,1.0
+Chennai,Anna Nagar,ZAM ZAM MURTHABAK,Cloud Kitchen,South Indian,250,1.0
+Chennai,Anna Nagar,Dhabba Express,Restaurant,Punjabi,175,3.9
+Chennai,Anna Nagar,LITTLE HUT  HOTEL,Cloud Kitchen,Arabian,150,4.3
+Chennai,Anna Nagar,The Bowl Company,Restaurant,Continental,150,4.3
+Chennai,Anna Nagar,Starbucks Coffee,Restaurant,Beverages,200,4.4
+Chennai,Anna Nagar,Shree Aishwaryam Veg Restaurant,Restaurant,South Indian,100,1.0
+Chennai,Anna Nagar,Bangkok Bae,Restaurant,Asian,150,4.2
+Chennai,Guindy,Palaniammal Hotel,Restaurant,Indian,125,1.0
+Chennai,Guindy,Madurai Devar Hotel,Restaurant,North Indian,200,4.0
+Chennai,Guindy,Bong 360,Restaurant,Indian,75,4.0
+Chennai,Guindy,ALANDUR TASTEE BIRIYANI,Cloud Kitchen,Chinese,140,3.9
+Chennai,Guindy,Cilantro - Le Royal Meridien,Restaurant,European,150,1.0
+Chennai,Guindy,Sgn Yummy N Delicious,Restaurant,Continental,100,1.0
+Chennai,Guindy,Subhashree Shop,Restaurant,Indian,100,1.0
+Chennai,Guindy,Paati's Chai House,Cloud Kitchen,Beverages,100,3.7
+Chennai,Guindy,EGG WALLAH,Cloud Kitchen,Indian,150,3.9
+Chennai,Guindy,Madurai Alagar Chettinad Restaurant,Restaurant,Chettinad,150,1.0
+Chennai,Mylapore,Cream & Fudge,Cloud Kitchen,Ice Cream,125,4.3
+Chennai,Mylapore,Subham Ganesan,Restaurant,Sweets,50,4.5
+Chennai,Mylapore,Palmshore,Cloud Kitchen,North Indian,250,4.1
+Chennai,Mylapore,Pizza Hut,Cloud Kitchen,Pizzas,200,4.1
+Chennai,Mylapore,Biriyani Venuma,Restaurant,Biryani,200,4.0
+Chennai,Mylapore,Bread Boutique by Brew Room,Cloud Kitchen,Bakery,150,4.4
+Chennai,Mylapore,ROLL AWAY BY RADIOROOM,Restaurant,South Indian,150,1.0
+Chennai,Mylapore,Munch,Cloud Kitchen,Chaat,100,4.3
+Chennai,Mylapore,Mami Tiffen,Cloud Kitchen,South Indian,100,4.5
+Chennai,Mylapore,Mylai Karpagambal Mess,Cloud Kitchen,South Indian,125,4.4
+Chennai,Nungambakkam,Deccan Biriyani House,Cloud Kitchen,Biryani,150,1.0
+Chennai,Nungambakkam,Subway,Cloud Kitchen,Fast Food,175,4.3
+Chennai,Nungambakkam,PANAYAA Veg Multicuisine Kitchen,Restaurant,Oriental,425,1.0
+Chennai,Nungambakkam,CAKEWALK,Restaurant,Bakery,250,4.5
+Chennai,Nungambakkam,Madras wala,Cloud Kitchen,Snacks,125,1.0
+Chennai,Nungambakkam,Mamagoto,Restaurant,Chinese,400,4.3
+Chennai,Nungambakkam,Delifish,Cloud Kitchen,Seafood,150,1.0
+Chennai,Nungambakkam,Cinnamon House,Restaurant,Desserts,100,4.4
+Chennai,Nungambakkam,McDonald's,Restaurant,Burgers,200,4.2
+Chennai,Nungambakkam,Toscano,Restaurant,Italian,600,4.3
+Chennai,OMR,Dumont Creamery,Cloud Kitchen,Desserts,125,4.7
+Chennai,OMR,The Wedding Biryani,Cloud Kitchen,Biryani,300,3.9
+Chennai,OMR,The Royals Kebab,Restaurant,Arabian,150,3.4
+Chennai,OMR,McCafe by McDonald's,Cloud Kitchen,Beverages,125,1.0
+Chennai,OMR,HIGH ON GREEN,Cloud Kitchen,Continental,400,1.0
+Chennai,OMR,NI FOODS AND DIET,Restaurant,Healthy Food,150,4.9
+Chennai,OMR,KUMARI AKKA KADAI,Restaurant,South Indian,125,1.0
+Chennai,OMR,Shree Swastik Bhavan,Restaurant,Chinese,100,3.2
+Chennai,OMR,Wow! Momo,Restaurant,Tibetan,150,4.2
+Chennai,OMR,Chai Truck,Restaurant,Beverages,100,4.0
+Chennai,Perambur,Leenas kitchen,Restaurant,Bakery,125,1.0
+Chennai,Perambur,CAKE SQUARE,Cloud Kitchen,Bakery,200,1.0
+Chennai,Perambur,DELIGHT CAKE TREAT,Restaurant,Bakery,200,1.0
+Chennai,Perambur,Highway Dhaba,Restaurant,Indian,150,1.0
+Chennai,Perambur,SPICY FOODIE AND SNACK,Cloud Kitchen,Indian,125,1.0
+Chennai,Perambur,MAYURI TIFFEN CENTRE,Restaurant,South Indian,100,1.0
+Chennai,Perambur,Grillland BBQ,Cloud Kitchen,American,100,4.2
+Chennai,Perambur,Taj Tandoori Chicken,Cloud Kitchen,Tandoor,75,1.0
+Chennai,Perambur,MUNCHIS PIZZERIA,Cloud Kitchen,Pizzas,200,1.0
+Chennai,Perambur,Classic Rider Cafe Kodungaiyur,Restaurant,Beverages,124,1.0
+Chennai,Perungudi,Kavin Fish Family Restaurant,Cloud Kitchen,Chinese,100,3.8
+Chennai,Perungudi,Toast 99 Dosa,Restaurant,Snacks,100,3.8
+Chennai,Perungudi,The Royals Kebab,Cloud Kitchen,Arabian,150,3.4
+Chennai,Perungudi,Hotel Crescent,Restaurant,South Indian,250,4.2
+Chennai,Perungudi,Gold Fresh Juice Shop,Cloud Kitchen,Juices,100,4.6
+Chennai,Perungudi,Aaladipattiyan Halwakadai's Karupatti Coffee,Restaurant,Sweets,150,4.7
+Chennai,Perungudi,Hotel Sima,Restaurant,Fast Food,100,1.0
+Chennai,Perungudi,Zeeshan Restaurant,Restaurant,North Indian,250,4.1
+Chennai,Perungudi,Dear Maggi,Restaurant,Indian,75,1.0
+Chennai,Perungudi,Chaayos Chai+Snacks=Relax,Restaurant,Bakery,125,4.4
+Chennai,Porur,THE CUTLETs HOUSE,Restaurant,Fast Food,100,1.0
+Chennai,Porur,Unlimited biriyani point,Cloud Kitchen,Biryani,125,2.7
+Chennai,Porur,Karaikudi Hotel,Restaurant,Biryani,125,3.3
+Chennai,Porur,Uttar Bhojan,Restaurant,North Indian,100,4.3
+Chennai,Porur,Al Awafi,Restaurant,Chinese,175,1.0
+Chennai,Porur,MAC CAFE,Cloud Kitchen,Snacks,100,1.0
+Chennai,Porur,AMUL ICE CREAM,Cloud Kitchen,Ice Cream,150,4.2
+Chennai,Porur,Lassi Nation,Cloud Kitchen,Beverages,100,1.0
+Chennai,Porur,SHAWARMA CRIME,Restaurant,Arabian,150,4.2
+Chennai,Porur,TAMILIAN UNAVAGHAM,Cloud Kitchen,South Indian,50,1.0
+Chennai,Sholinganallur,AK Home Foods,Cloud Kitchen,Biryani,150,1.0
+Chennai,Sholinganallur,MADURAI KARI DOSAI,Restaurant,South Indian,150,1.0
+Chennai,Sholinganallur,Night Feast,Cloud Kitchen,North Indian,100,3.8
+Chennai,Sholinganallur,Chai Galli,Restaurant,North Indian,100,4.2
+Chennai,Sholinganallur,Paradise Biryani,Restaurant,Biryani,200,4.0
+Chennai,Sholinganallur,Hyderabad Biryani,Restaurant,Biryani,150,2.5
+Chennai,Sholinganallur,HYDERABADI BHAI BIRYANI,Cloud Kitchen,Biryani,125,4.1
+Chennai,Sholinganallur,Ya Rahman Briyani,Cloud Kitchen,Biryani,150,3.3
+Chennai,Sholinganallur,Rock N Roll,Restaurant,Fast Food,150,1.0
+Chennai,Sholinganallur,Green Onion & Deat Restaurant,Restaurant,South Indian,150,3.3
+Chennai,T Nagar,SS RAHMAN BIRIYANI AND FAST FOOD,Restaurant,Kerala,150,1.0
+Chennai,T Nagar,Chit Chat,Restaurant,Desserts,50,1.0
+Chennai,T Nagar,Go Grill,Cloud Kitchen,Biryani,150,1.0
+Chennai,T Nagar,Ice Cream Zone- Beracha Stores,Cloud Kitchen,Ice Cream,100,1.0
+Chennai,T Nagar,The Biryani Life,Restaurant,Biryani,125,4.1
+Chennai,T Nagar,1BY2,Restaurant,Beverages,125,1.0
+Chennai,T Nagar,Suchi's Gourmet Kitchen,Cloud Kitchen,Biryani,850,1.0
+Chennai,T Nagar,DAILY MEALS / Chinthamani Foods Chennai Private Li,Cloud Kitchen,Indian,125,1.0
+Chennai,T Nagar,Paratha Box by EatFit,Cloud Kitchen,North Indian,125,4.3
+Chennai,T Nagar,Veni Akka Kadai,Restaurant,South Indian,200,1.0
+Chennai,Tambaram,FrostBite,Restaurant,Fast Food,125,4.3
+Chennai,Tambaram,BOWL PURI,Restaurant,Chaat,75,1.0
+Chennai,Tambaram,Faasos' Signature Wraps & Rolls,Restaurant,Snacks,175,1.0
+Chennai,Tambaram,Hot Chips,Restaurant,South Indian,100,4.4
+Chennai,Tambaram,North Indian chaat in chapati,Cloud Kitchen,Chaat,50,1.0
+Chennai,Tambaram,RJ Home Made Curry  Web - Kulambu kadai,Restaurant,South Indian,50,1.0
+Chennai,Tambaram,Galaxy,Cloud Kitchen,Indian,200,1.0
+Chennai,Tambaram,FB CAKES,Restaurant,Bakery,100,4.3
+Chennai,Tambaram,Bismi Biriyani And Fast Food,Restaurant,Biryani,250,3.8
+Chennai,Tambaram,Cafe 33,Cloud Kitchen,Italian,150,1.0
+Chennai,Velachery,Happy Cloud Pizza N Pasta,Cloud Kitchen,Pizzas,100,1.0
+Chennai,Velachery,Suvai Kuzhambu Kadai,Restaurant,South Indian,100,4.0
+Chennai,Velachery,Iceberg Organic Icecreams,Cloud Kitchen,Ice Cream,100,1.0
+Chennai,Velachery,Thai Kitchen,Restaurant,South Indian,100,1.0
+Chennai,Velachery,Brownie Heaven,Cloud Kitchen,Desserts,150,4.5
+Chennai,Velachery,Burma square 1,Restaurant,Chinese,100,3.7
+Chennai,Velachery,New L2V Feast,Cloud Kitchen,Juices,125,3.9
+Chennai,Velachery,Keventers Ice Cream,Restaurant,Ice Cream,150,1.0
+Chennai,Velachery,NAMMA CHENNAI KITCHEN,Restaurant,Indian,100,1.0
+Chennai,Velachery,Istah Shawarma,Restaurant,Arabian,125,4.2
+Chennai,Mylapore,CAKE PARK,Restaurant,Bakery,450,1.0
+Chennai,Mylapore,Lassi Cream-Citi Centre,Restaurant,Desserts,75,4.1
+Chennai,Mylapore,Keventers - Milkshakes and Desserts,Cloud Kitchen,Beverages,150,4.3
+Chennai,Mylapore,Hotel Marina Park,Restaurant,Indian,200,3.6
+Chennai,Mylapore,Chinnaya Mess,Cloud Kitchen,South Indian,150,1.0
+Chennai,Mylapore,ARUMUGAM IDLY KADAI,Restaurant,South Indian,50,3.9
+Chennai,Mylapore,Namma Biryani Kadai,Cloud Kitchen,Biryani,100,1.0
+Chennai,Mylapore,THAMBI TEA INNUM VARALA,Cloud Kitchen,Beverages,150,1.0
+Chennai,Mylapore,TEA TIME,Restaurant,Indian,75,1.0
+Chennai,Nungambakkam,Mexicano Griller,Cloud Kitchen,Mexican,400,3.4
+Chennai,Nungambakkam,Foo King Kitchen,Restaurant,Pan-Asian,100,1.0
+Chennai,Nungambakkam,New Archana Fast Food,Restaurant,Chinese,150,4.1
+Chennai,Nungambakkam,ALOE - The Belstead,Restaurant,Chinese,100,1.0
+Chennai,Nungambakkam,Red Sun Chinese restaurant,Restaurant,Chinese,200,1.0
+Chennai,Nungambakkam,KMS Hakkim kalyana Biriyani Restaurant,Restaurant,Biryani,150,3.9
+Chennai,Nungambakkam,The Thief,Cloud Kitchen,Continental,600,1.0
+Chennai,Nungambakkam,Paradise sandwich,Restaurant,Snacks,125,3.6
+Chennai,Nungambakkam,Nght Mrkt,Restaurant,Italian,300,1.0
+Chennai,Perambur,LunchBox - Meals and Thalis,Restaurant,North Indian,100,4.0
+Chennai,Perambur,AKSSHA CATERING SERVICES,Restaurant,South Indian,66,1.0
+Chennai,Perambur,ALJAZEERA BIRIYANI,Cloud Kitchen,Indian,139,1.0
+Chennai,Perambur,Lassi Shop - kolathur,Restaurant,Ice Cream,100,4.0
+Chennai,Perambur,DS veetu virundhu,Restaurant,Chinese,240,1.0
+Chennai,Perambur,Waffode,Cloud Kitchen,Waffle,150,1.0
+Chennai,Perambur,Mr.Idly 'N' Mrs.Dosa,Restaurant,South Indian,75,4.1
+Chennai,Perambur,90's hut,Restaurant,Chaat,50,1.0
+Chennai,Perambur,Food hub,Cloud Kitchen,Chinese,150,1.0
+Chennai,Perambur,Pure Veg Meals by Lunchbox,Cloud Kitchen,North Indian,100,1.0
+Bengaluru,Jayanagar,GOWHEY- HEALTHY DESSERT COMPANY,Restaurant,Desserts,100,3.3
+Bengaluru,Jayanagar,Corner House Ice Cream,Restaurant,Ice Cream,125,4.2
+Bengaluru,Jayanagar,Jaynagar Thindi Mane,Restaurant,South Indian,100,4.0
+Bengaluru,Jayanagar,Chat bandi,Restaurant,Chaat,65,3.8
+Bengaluru,Jayanagar,Shariefia Barbequeue,Restaurant,Chinese,100,3.2
+Bengaluru,Jayanagar,WAFFLE & ICE-CREAM,Restaurant,Ice Cream,100,3.4
+Bengaluru,Jayanagar,Rotti Mane,Restaurant,Indian,75,3.5
+Bengaluru,Jayanagar,The Red Box,Restaurant,Chinese,200,3.9
+Bengaluru,Jayanagar,Piazza pizza by Little Italy,Restaurant,Pizzas,250,3.5
+Bengaluru,Jayanagar,HOTEL MANASA,Restaurant,Indian,125,4.3
+Bengaluru,JP Nagar,SMOOR,Restaurant,Bakery,225,3.8
+Bengaluru,JP Nagar,Mealful Rolls - Meals in a Roll,Restaurant,Fast Food,125,3.0
+Bengaluru,JP Nagar,Karnatic,Restaurant,South Indian,300,3.8
+Bengaluru,JP Nagar,Street Kitchen By Mandi Pure Veg,Restaurant,Snacks,75,3.6
+Bengaluru,JP Nagar,Shake Break,Restaurant,Beverages,125,4.0
+Bengaluru,JP Nagar,Vaishali Family Restaurant,Restaurant,Chinese,250,3.4
+Bengaluru,JP Nagar,ARUN ICECREAMS,Restaurant,Ice Cream,125,3.3
+Bengaluru,JP Nagar,CHINESE HOT POT COOK BOOK,Restaurant,Chinese,100,3.7
+Bengaluru,JP Nagar,IceBreakers Ice Creams,Restaurant,Ice Cream,150,4.2
+Bengaluru,Yeshwanthpur,LET'S EAT ULTIMA,Restaurant,Fast Food,100,3.1
+Bengaluru,Yeshwanthpur,Midnight Tiffins,Restaurant,South Indian,75,4.3
+Bengaluru,Yeshwanthpur,COFFEE SANTHE,Restaurant,South Indian,50,4.4
+Bengaluru,Yeshwanthpur,Smoodies & Juices: Yours Fruitfully,Restaurant,Snacks,70,3.9
+Bengaluru,Yeshwanthpur,Captain Momos,Restaurant,Chinese,100,4.4
+Bengaluru,Yeshwanthpur,VILAS ENTERPRISES/ JUST BAKE,Restaurant,Desserts,125,3.9
+Bengaluru,Yeshwanthpur,Tasty Momos,Restaurant,Chinese,125,3.9
+Bengaluru,Yeshwanthpur,Karavali Deluxe,Restaurant,North Indian,200,3.3
+Bengaluru,Yeshwanthpur,KARTHIK CHATS,Restaurant,Indian,75,3.5
+Chennai,Vadapalani,SRI MAHA MESS,Restaurant,Indian,100,1.0
+Chennai,Vadapalani,My Life My Food,Restaurant,Indian,125,1.0
+Chennai,Vadapalani,Mambalams Venkateshwara Boli Stall,Cloud Kitchen,Street Food,125,4.3
+Chennai,Vadapalani,Toff Cafe,Restaurant,Snacks,125,1.0
+Chennai,Vadapalani,Salt Indian Restaurant & Grill,Cloud Kitchen,North Indian,750,3.9
+Chennai,Vadapalani,Sai Healthy food diet,Cloud Kitchen,Healthy Food,75,2.7
+Chennai,Vadapalani,KEKIZ THE CAKE SHOP,Cloud Kitchen,Bakery,100,1.0
+Chennai,Vadapalani,SalSha Kebab,Restaurant,Biryani,150,3.9
+Chennai,Vadapalani,CSK KUZHAMBU KADAI CURRY POINT,Cloud Kitchen,South Indian,50,4.4
+Chennai,Vadapalani,Madras Kitchen,Restaurant,South Indian,125,3.4
+Chennai,Ambattur,Frizzle,Restaurant,Arabian,125,1.0
+Chennai,Ambattur,Dollars juice and milkshakes,Restaurant,Juices,50,1.0
+Chennai,Ambattur,KFC,Restaurant,American,200,4.0
+Chennai,Ambattur,Mr.Burger,Cloud Kitchen,Continental,125,3.8
+Chennai,Ambattur,Sindhu Barbecue & Family Restaurant,Restaurant,Tandoor,400,1.0
+Chennai,Ambattur,Bharani hotel,Cloud Kitchen,South Indian,150,3.7
+Chennai,Ambattur,Sri Velavan mess,Cloud Kitchen,Indian,100,1.0
+Chennai,Ambattur,D T Cafe & Restaurant,Restaurant,Juices,100,1.0
+Chennai,Ambattur,Madurai Famous Jigarthanda,Restaurant,Beverages,100,3.5
+Chennai,Ambattur,The Brooklyn Creamery - Healthy Ice Cream,Cloud Kitchen,Desserts,100,3.5
+Bengaluru,Rajajinagar,Quickie Bites,Restaurant,Fast Food,150,3.2
+Bengaluru,Rajajinagar,Meals on the Wheels,Restaurant,Fast Food,150,4.4
+Bengaluru,Rajajinagar,Bhikaram Chandmal-Taste of Bikaner,Restaurant,Fast Food,90,3.9
+Bengaluru,Rajajinagar,Rajajinagar Eatery 1,Cloud Kitchen,Desserts,112,4.2
+Bengaluru,Rajajinagar,Rajajinagar Eatery 2,Restaurant,Street Food,167,3.7
+Bengaluru,Rajajinagar,Rajajinagar Eatery 3,Restaurant,Street Food,96,4.2
+Bengaluru,Rajajinagar,Rajajinagar Eatery 4,Cloud Kitchen,North Indian,153,4.4
+Bengaluru,Rajajinagar,Rajajinagar Eatery 5,Cloud Kitchen,Biryani,153,4.5
+Bengaluru,Rajajinagar,Rajajinagar Eatery 6,Restaurant,North Indian,157,4.0
+Bengaluru,Rajajinagar,Rajajinagar Eatery 7,Cloud Kitchen,North Indian,203,3.8
+Bengaluru,RT Nagar,Kachori Chowk,Restaurant,Rajasthani,200,4.3
+Bengaluru,RT Nagar,Bakingo,Restaurant,Bakery,150,4.1
+Bengaluru,RT Nagar,Pastas By Pizza Hut,Restaurant,Pastas,150,3.0
+Bengaluru,RT Nagar,Shetty's Lunch Home,Restaurant,North Indian,148,3.3
+Bengaluru,RT Nagar,Khan's laziz hotel,Restaurant,Indian,100,3.6
+Bengaluru,RT Nagar,Big Mishra Peda,Restaurant,Desserts,100,4.4
+Bengaluru,RT Nagar,HOTEL  AARAMBHA,Restaurant,Indian,100,4.5
+Bengaluru,RT Nagar,Marwar's,Restaurant,Rajasthani,75,3.3
+Bengaluru,RT Nagar,Momoz,Restaurant,Chinese,175,3.6
+Bengaluru,RT Nagar,donut Hubb,Restaurant,Desserts,85,4.4
